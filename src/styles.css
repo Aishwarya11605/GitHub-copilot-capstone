@@ -1,0 +1,322 @@
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #17212f;
+  background: #f7f8fa;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+.app-shell {
+  width: min(100% - 2rem, 58rem);
+  margin: 0 auto;
+  padding: 1.5rem 0 3rem;
+}
+
+:focus-visible {
+  outline: 3px solid #165dca;
+  outline-offset: 2px;
+}
+
+h1,
+h2,
+h3,
+p {
+  overflow-wrap: anywhere;
+}
+
+h1 {
+  margin: 0.15rem 0 0.35rem;
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.page-header {
+  margin-bottom: 1.5rem;
+}
+
+.page-header > p:last-child,
+.eyebrow {
+  color: #465568;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.storage-disclosure,
+.file-tools,
+.task-form,
+.search-filter,
+.task-card,
+.stale-panel,
+.error-panel {
+  border: 1px solid #c5ced8;
+  border-radius: 0.7rem;
+  background: #fff;
+  padding: 1rem;
+}
+
+.storage-disclosure,
+.file-tools,
+.workspace,
+.task-list-section {
+  margin-bottom: 1.25rem;
+}
+
+.storage-disclosure p,
+.help-text,
+.task-date,
+.field small {
+  color: #435164;
+  line-height: 1.5;
+}
+
+.file-tools-row,
+.button-row,
+.task-heading-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.file-tools-row {
+  justify-content: space-between;
+}
+
+.import-picker {
+  flex: 1 1 17rem;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(15rem, 0.8fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.field {
+  display: grid;
+  gap: 0.35rem;
+  min-width: 0;
+  margin-bottom: 0.9rem;
+}
+
+.field label {
+  font-weight: 650;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #718096;
+  border-radius: 0.35rem;
+  padding: 0.65rem 0.7rem;
+  background: #fff;
+  color: #17212f;
+  font: inherit;
+}
+
+input[type="file"] {
+  padding: 0.45rem;
+}
+
+input[type="checkbox"] {
+  width: 1.15rem;
+  height: 1.15rem;
+  accent-color: #165dca;
+}
+
+button {
+  min-height: 2.65rem;
+  border: 1px solid #165dca;
+  border-radius: 0.4rem;
+  padding: 0.55rem 0.85rem;
+  background: #165dca;
+  color: #fff;
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+
+button:hover {
+  background: #104997;
+}
+
+button.secondary {
+  border-color: #66758a;
+  background: #fff;
+  color: #17212f;
+}
+
+button.secondary:hover {
+  background: #edf1f5;
+}
+
+button.danger {
+  border-color: #8b1e2d;
+  background: #8b1e2d;
+}
+
+button.danger:hover {
+  background: #6f1522;
+}
+
+.search-filter {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(9rem, 0.7fr);
+  gap: 0.75rem;
+}
+
+.task-list {
+  display: grid;
+  gap: 0.8rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.task-card h3 {
+  margin: 0;
+}
+
+.task-heading-row {
+  justify-content: space-between;
+}
+
+.completion-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  white-space: nowrap;
+}
+
+.task-description {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.task-date {
+  margin-bottom: 0.7rem;
+  font-size: 0.9rem;
+}
+
+.task-actions {
+  justify-content: flex-start;
+}
+
+.field-error,
+.error-panel {
+  color: #651b16;
+}
+
+.field-error {
+  margin: 0;
+  font-weight: 650;
+}
+
+.error-panel {
+  border-color: #9d382f;
+  background: #fff4f2;
+}
+
+.stale-panel {
+  margin: 1rem 0;
+  border-color: #9b6a12;
+  background: #fff8e8;
+}
+
+.unsaved-notice {
+  border-left: 4px solid #9b6a12;
+  padding: 0.5rem 0.75rem;
+  background: #fff8e8;
+  font-weight: 650;
+}
+
+.status-message,
+.empty-state {
+  min-height: 1.5em;
+}
+
+dialog {
+  width: min(34rem, calc(100% - 2rem));
+  max-height: min(85vh, 48rem);
+  overflow: auto;
+  border: 1px solid #758294;
+  border-radius: 0.7rem;
+  padding: 0;
+  color: #17212f;
+  box-shadow: 0 1rem 3rem rgb(0 0 0 / 28%);
+}
+
+dialog::backdrop {
+  background: rgb(13 24 38 / 58%);
+}
+
+.dialog-content {
+  padding: 1.25rem;
+}
+
+.dialog-actions {
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.preview-list {
+  max-height: 12rem;
+  overflow: auto;
+  padding-left: 1.4rem;
+}
+
+@media (max-width: 640px) {
+  .workspace {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .search-filter {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .task-heading-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .file-tools-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .file-tools-row > button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+}
